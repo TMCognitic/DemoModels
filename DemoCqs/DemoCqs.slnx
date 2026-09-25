@@ -1,2 +1,4 @@
 <Solution>
+  <Project Path="DemoCqs.Domain/DemoCqs.Domain.csproj" Id="d296bb5f-40ab-42c0-9af5-28f59bef0109" />
+  <Project Path="DemoCqs/DemoCqs.csproj" Id="844575a6-e2bc-4d01-bf0d-adb2f16e81b5" />
 </Solution>

@@ -4,6 +4,7 @@ using DemoDalBll.Models.Bll.Mappers;
 using DemoDalBll.Models.Bll.Repositories;
 
 using DR = DemoDalBll.Models.Dal.Repositories;
+using DE = DemoDalBll.Models.Dal.Entities;
 
 
 namespace DemoDalBll.Models.Bll.Services
@@ -25,6 +26,14 @@ namespace DemoDalBll.Models.Bll.Services
         public bool Insert(Personne personne)
         {
             return _dalRepository.Insert(personne.ToDal());
+        }
+
+        public bool Update(int id, Personne personne)
+        {
+            DE.Personne p = personne.ToDal();
+            p.Id = id;
+
+            return _dalRepository.Update(p);            
         }
     }
 }

@@ -25,5 +25,11 @@ namespace DemoDalBll.Models.Dal.Services
         {
             return 1 == _connection.ExecuteNonQuery("INSERT INTO Personne (Nom, Prenom, Email, Adresse, CodePostal, Localite) VALUES (@Nom, @Prenom, @Email, @Adresse, @CodePostal, @Localite)", parameters: personne);
         }
+
+        public bool Update(Personne personne)
+        {
+            return 1 == _connection.ExecuteNonQuery("UPDATE Personne SET Nom = @Nom, Prenom = @Prenom, Email = @Email, Adresse = @Adresse, CodePostal = @CodePostal, Localite = @Localite WHERE Id = @Id", parameters: personne);
+
+        }
     }
 }

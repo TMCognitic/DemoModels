@@ -30,12 +30,15 @@ Personne p = new Personne("Doe", "John", "john.doe@test.be", "Rue du pavot, 85",
 
 if(repository.Insert(p))
 {
-    IEnumerable<Personne> personnes = repository.Get();
+    IEnumerable<Personne> personnes = repository.Get().ToList();
 
     foreach (Personne personne in personnes)
     {
         Console.WriteLine($"{personne.NomComplet}");
     }
+
+    personnes.First().CodePostal = 12000;
+    repository.Update(personnes.First().Id, personnes.First());
 }
 
 

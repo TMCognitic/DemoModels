@@ -6,5 +6,6 @@ namespace DemoDalBll.Models.Bll.Repositories
     {
         IEnumerable<Personne> Get();
         bool Insert(Personne personne);
+        bool Update(int id, Personne personne);
     }
 }
