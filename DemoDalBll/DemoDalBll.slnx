@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DemoDalBll.Models.Bll/DemoDalBll.Models.Bll.csproj" />
+  <Project Path="DemoDalBll.Models.Dal/DemoDalBll.Models.Dal.csproj" />
+  <Project Path="DemoDalBll/DemoDalBll.csproj" />
+</Solution>
